@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spices</title>
+    <link rel="stylesheet" href="style.css">
+    
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <title>SPICES</title>  
+</head>
+<body>
+
+  
+  
+ 
+
+<!---Navbar--->
+<nav class="navbar navbar-expand-lg bg-light" id="navbar">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">SPICES</a>
+    <li class="nav-item">
+          <a class="nav-link" href="#login">LOGIN</a>
+        </li>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mx-auto">
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#product">Product</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+    <!---Login--->
+
+    <section>
+      <div class="login mx-auto">
+        <h2 class="text-center mt-3" data-aos="fade-down">LOGIN</h2>
+        <form action="" #singnInForm="ngform" (ngSubmit)="onSubmit(signInForm)" class="mx-auto mt-3 pb-2">
+        <div class="form-group my-4" data-aos="fade-right">
+          <input type="text" autocomplete="off" ngModel placeholder="Username" name="username" #user="ngModel" class="" required id="username">
+          <i class="bi bi-person-circle my-auto mx-3 fs-5"></i>
+          <span *ngIf="user.invalid && user.touched" class="alert px-auto">
+            *Username should not be empty
+          </span>
+        </div>
+        <div class="form-group" data-aos="fade-right">
+          <input [type]="changetype?'password':'text'" minlength="6" autocomplete="off" #pass="ngModel" ngModel placeholder="password" name="password">
+          <span (click)="viewpass()" class=""><i [ngClass]="visible?'bi bi-eye-slash-file':'bi bi-eye-fill'" class="my-auto mx-auto fs-5" ></i></span>
+          <spa *ngIf="pass.invalid && pass.touched" class="alert px-auto">
+            *Password must be 6 characters long
+          </spa>
+        </div>
+        <button type="submit" class="btn btn-primary p-1 mt-4" [disable]="!signInForm.valid">Sign-In"</button>
+        <div *ngIf="errorMessage" class="error-message alert px-auto">{{errorMessage}}</div>
+        <div class="low d-flex mx-2 pt-3">
+          <p class="mx-4"><a href="#home">Foreget Password</a></p>
+          <p class="mx-4">New User?<a href="#home" >Home</a></p>
+        </div> 
+        </form>
+      </div>
+    </section>
+      
+      <!-- Home -->
+      <section id="home">
+        <h1 class="text-center mt-5 mb-5">ORGANIC SPICES</h1>
+        
+      </section>
+
+
+      <!---About--->
+
+      <section id="about">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-12 mt-5 p-lg-5 my-2">
+              <img src="about.png">
+            </div>
+            <div class="col-lg-6 col-md-6 col-12 p-lg-5 p-2 my-5">
+              <h1>ABOUT US</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto facilis ullam animi laboriosam reiciendis ipsa quos, adipisci voluptates facere distinctio. Veniam quisquam voluptas soluta aspernatur assumenda, consectetur aliquid saepe itaque?Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus deserunt omnis optio possimus maiores velit minima consequuntur impedit a assumenda ad expedita laborum eum quae labore, voluptate eligendi aspernatur! <Repudiandae class="lo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia recusandae qui expedita id! Accusamus odit quae voluptatum cum totam quod eum consectetur vero, voluptas repudiandae, impedit optio placeat, aperiam architecto.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt accusamus, sapiente quam voluptatibus quia distinctio eaque vitae expedita architecto blanditiis veritatis at nostrum aspernatur laudantium. Eaque molestias dignissimos earum dolor!lo
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae consequatur, dolorum id repellat obcaecati facere vel. Asperiores magnam culpa quibusdam porro veritatis cum quasi ipsa itaque. Omnis expedita sequi dignissimos!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis, in. Dolore deserunt vitae exercitationem vel alias ea fugiat impedit unde dignissimos ipsa, sunt, officiis minus soluta ab tempore maxime repellendus?
+              </p>
+            </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!---- product ---->
+
+      <section id="product">
+        <div class="container-fluid text-center" >
+          <h1 class="text-center my-5">OUR PRODUCT</h1>
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-12">
+              <div class="card">
+                <img src="img 1.jpg" class="card-img-top">
+                <div class="card-body text-center">
+                  <span class="PRICE">Rs.$50</span>
+
+                  <ion-icon name="cart" class="add-cart"></ion-icon>
+                  <p>amet consectetur adipisicing elit. Magni possimus odit, quibusdam vero ullam nihil corrupti. Tempora numquam amet, animi eos eaque voluptates corrupti voluptate odio, aspernatur asperiores, rerum aperiam.</p>
+                  <h5 class="card-title">Card title</h5>
+                  <a href="#" class="btn signin">Add To Cart</a>
+                </div>
+              </div>
+              
+            </div>
+              <div class="col-lg-4 col-md-4 col-12">
+                <div class="card">
+                  <img src="img 4.jpg" class="card-img-top">
+                  <div class="card-body text-center">
+                    <span class="PRICE">Rs.$70</span>
+                    <ion-icon name="cart" class="add-cart"></ion-icon>
+                    <p>amet consectetur adipisicing elit. Deserunt omnis nostrum officiis sapiente impedit tempore modi itaque quae voluptates debitis recusandae explicabo rerum dolorum necessitatibus voluptatum voluptatem facilis, nemo odit.</p>
+                    <h5 class="card-title">Card title</h5>
+                    <a href="#" class="btn signin">Add To Cart</a>
+                  </div>      
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card">
+            <img src="img 5.jpg" class="card-img-top">
+            <div class="card-body text-center">
+              <span class="PRICE">Rs.$80</span>
+              <ion-icon name="cart" class="add-cart"></ion-icon>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt repudiandae eum nesciunt quaerat distinctio at, officia illo aperiam excepturi ipsam quas aliquam? Quod maiores repudiandae cum labore ullam temporibus voluptates!</p>
+              <h5 class="card-title">Card title</h5>
+              <a href="#" class="btn signin">Add To Cart</a>
+            </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-12">
+            <div class="card">
+              <img src="img.6.jpg" class="card-img-top">
+              <div class="card-body text-center">
+                <span class="PRICE">Rs.$60</span>
+                <ion-icon name="cart" class="add-cart"></ion-icon>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dignissimos quam veritatis ipsam quae, modi molestias quia velit necessitatibus ad molestiae voluptate ea dicta sit quos placeat illum incidunt ipsa.</p>
+                <h5 class="card-title">Card title</h5>
+                <a href="#" class="btn signin">Add To Cart</a>
+              </div>
+      </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card">
+            <img src="pic 5.jpg" class="card-img-top">
+            <div class="card-body text-center">
+              <span class="PRICE">Rs.$40</span>
+              <ion-icon name="cart" class="add-cart"></ion-icon>
+              <p>amet consectetur adipisicing elit. Nesciunt, soluta animi. Totam ipsa dolore temporibus molestiae similique mollitia corporis numquam quia nesciunt perspiciatis esse sapiente facilis, harum quis quae animi.</p>
+              <h5 class="card-title">Card title</h5>
+              <a href="#" class="btn signin">Add To Cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card">
+            <img src="pic 1.jpg" class="card-img-top">
+            <div class="card-body text-center">
+              <span class="PRICE">Rs.$79</span>
+              <ion-icon name="cart" class="add-cart"></ion-icon>
+              <p>adipisicing elit. Tempore, commodi repellendus. Tenetur aspernatur, alias inventore omnis, perferendis corrupti consectetur architecto nisi repellendus assumenda earum ducimus, nihil repellat mollitia rem dignissimos!</p>
+              <h5 class="card-title">Card title</h5>
+              <a href="#" class="btn signin">Add To Cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card">
+            <img src="pic 2.jpg" class="card-img-top">
+            <div class="card-body text-center">
+              <span class="PRICE">Rs.$69</span>
+              <ion-icon name="cart" class="add-cart"></ion-icon>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique consequuntur adipisci quas modi cumque accusamus sunt sint molestias ex mollitia! Totam ex accusamus placeat. Animi obcaecati voluptate voluptatum eligendi aut.</p>
+              <h5 class="card-title">Card title</h5>
+              <a href="#" class="btn signin">Add To Cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card">
+            <img src="pic 3.jpg" class="card-img-top">
+            <div class="card-body text-center">
+              <span class="PRICE">Rs.$59</span>
+              <ion-icon name="cart" class="add-cart"></ion-icon>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. At perferendis nulla voluptates, error quae rem repellat eos inventore voluptatum incidunt cumque tenetur commodi dolorem soluta aspernatur sequi possimus reiciendis aperiam?</p>
+              <h5 class="card-title">Card title</h5>
+              <a href="#addtocard" class="btn signin">Add To Cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card">
+            <img src="pic 4.jpg" class="card-img-top">
+            <div class="card-body text-center">
+              <span class="PRICE">Rs.$49</span>
+              <ion-icon name="cart" class="add-cart"></ion-icon>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quisquam consectetur error nemo nesciunt voluptates reprehenderit velit! Natus perspiciatis nesciunt, fuga dicta, eum consequatur eveniet illum saepe consequuntur, totam provident!</p>
+              <h5 class="card-title">Card title</h5>
+              <a href="#" class="btn signin">Add To Cart</a>
+            </div>
+          </div>
+        </div>              
+      </section>
+
+      
+      <!--- contact --->
+
+      <section id="contact mt-5 mb-5">
+        <div class="container box">
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-12">
+              <img src="contact.jpg" class="img-fluid">
+            </div>
+            <div class="col-lg-6 col-md-6 col-12">
+              <h1 class="mt-5 my-5">CONTACT</h1>
+              <form class="mb-3">
+                <input type="text" class="form-control"
+                placeholder="Enter your name">
+                <input type="eamil" class="form-control"
+                placeholder="Enter your Email">
+                <textarea class="form-control"
+                placeholder="Email your message"></textarea>
+                <button class="btn signin mt-5">Send Massage</butto>
+              </form>
+              
+            </div>
+          </div>
+        </div>
+
+      </section>
+      <script src="john.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+</body>
+</html>
